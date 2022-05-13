@@ -1,0 +1,173 @@
+body{
+    background-color: lightgrey;
+}
+
+
+
+img {
+    border-radius: 30%;
+}
+
+.skills {
+   background-color: #007bb5;
+   width: 100%;
+   height: 100%;
+}
+
+.devicon {
+    height: 50px;
+    width: 50px;
+    padding: 20px;
+    transition: transform .8s ease-in-out;
+}
+
+.devicon:hover {
+    transform: rotate(360deg);
+}
+
+/* Contact Page */
+.fa {
+    padding: 20px;
+    font-size: 40px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+    border-radius: 40%
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+    border-radius: 40%;
+  }
+
+   /* Instagram */
+  .fa-instagram {
+    background: #125688;
+    color: white;
+    border-radius: 40%;
+  }
+
+     /* LinkedIn */
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+    border-radius: 40%;
+  }
+
+  /* Chat Bubble Styling */
+
+  #chat {
+    display: flex;
+    position: relative;
+    float: right;
+  }
+  
+
+    #chat1 {
+      height: 80px;
+      width: 80px;
+      border: none;
+      background: none;
+      cursor: pointer;
+  }
+  .background {
+    background-color: #1950ff;
+    border-radius: 50%;
+    box-shadow: 0 2.1px 1.3px rgba(0, 0, 0, 0.044),
+      0 5.9px 4.2px rgba(0, 0, 0, 0.054), 0 12.6px 9.5px rgba(0, 0, 0, 0.061),
+      0 25px 20px rgba(0, 0, 0, 0.1);
+    height: 80px;
+    left: 10px;
+    position: absolute;
+    top: 10px;
+    width: 80px;
+    float: right;
+    
+  }
+  .chat-bubble {
+    cursor: pointer;
+    position: relative;
+    float: right;
+  }
+  .bubble {
+    transform-origin: 50%;
+    transition: transform 500ms cubic-bezier(0.17, 0.61, 0.54, 0.9);
+    float: right;
+}
+  .line {
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 2.75;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    float: right;
+}
+  .line1 {
+    stroke-dasharray: 60 90;
+    stroke-dashoffset: -20;
+    float: right;
+  }
+  .line2 {
+    stroke-dasharray: 67 87;
+    stroke-dashoffset: -18;
+    float: right;
+  }
+  .circle {
+    fill: #ffffff;
+    stroke: none;
+    transform-origin: 50%;
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    float: right;
+  }
+  .active .bubble {
+    transform: translateX(24px) translateY(4px) rotate(45deg);
+    float: right;
+  }
+  .active .line1 {
+    stroke-dashoffset: 21;
+    float: right;
+  }
+  .active .line2 {
+    stroke-dashoffset: 30;
+    float: right;
+  }
+  .active .circle {
+    transform: scale(0);
+    float: right;
+  }
+
+  /* Form Styling */
+  .form-popup {
+    display: none;
+  }
+
+  .form-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 20;
+    background-color: #ffffff;
+    width: 500px;
+    max-width: 80%;
+    padding: 10px;
+  }
+
+  
