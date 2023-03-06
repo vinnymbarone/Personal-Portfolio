@@ -1,75 +1,189 @@
-body{
-    background-color: lightgrey;
+body {
+      font-family: "Open Sans", sans-serif;
+      margin: 0;
+      padding: 0 var(--spacing-3);
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      background-color: lightgrey;
+      font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Name, Navigation Bar Section */
+
+.name {
+  font-size: 2.5rem;
+  font-family: cursive;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 60px;
+	top: 0;
+}
+
+a {
+  color: black;
+}
+
+.navigation-item {
+  display: inline-block;
+  position: relative;
+  margin: 0px 30px;
+  font-size: 1.25rem;
+}
+
+
+a:hover {
+  color: crimson;
+  text-decoration: none;
+}
+
+/* About Me, Photo of Me Section */
+
+section {
+  display: block;
+}
+
+.about-me-container {
+  display: flex;
+  padding: 20px;
+}
+
+.about-me-text-container {
+  margin-right: var(--spacing-3);
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.portrait {
+  width: 270px;
+  border-radius: 30%;
+  flex-shrink: 0;
+  height: 300px;
+  padding: 20px;
+  
 }
 
 
 
-img {
-    border-radius: 30%;
+.contact-line {
+  color: crimson;
 }
 
-.skills {
-   background-color: #007bb5;
+
+/* Skills Section */
+
+.projects {
+  color: black;
+}
+
+.projects:hover {
+  color: crimson;
+}
+
+
+
+/* Skills Section */
+
+.logos {
    width: 100%;
-   height: 100%;
+   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
+
 
 .devicon {
-    height: 50px;
-    width: 50px;
+    height: 75px;
+    width: 75px;
     padding: 20px;
     transition: transform .8s ease-in-out;
 }
 
 .devicon:hover {
     transform: rotate(360deg);
+    cursor: pointer;
 }
 
+
 /* Contact Page */
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+
+/* Social Media Buttons*/
+.socials {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .fa {
-    padding: 20px;
-    font-size: 40px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-  }
-  
+  padding: 30px;
+  font-size: 55px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
 
-  .fa:hover {
+.fa:hover {
     opacity: 0.7;
-  }
-  
-  /* Set a specific color for each brand */
-  
-  /* Facebook */
-  .fa-facebook {
-    background: #3B5998;
-    color: white;
-    border-radius: 40%
-  }
-  
-  /* Twitter */
-  .fa-twitter {
-    background: #55ACEE;
-    color: white;
-    border-radius: 40%;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+
+/* Contacting Me */
+
+  img.collaboration-pic {
+  width: 400px;
+  border-radius: 30%;
+  flex-shrink: 0;
+  height: 300px;
+  padding: 20px;
   }
 
-   /* Instagram */
-  .fa-instagram {
-    background: #125688;
-    color: white;
-    border-radius: 40%;
-  }
-
-     /* LinkedIn */
-  .fa-linkedin {
-    background: #007bb5;
-    color: white;
-    border-radius: 40%;
-  }
 
   /* Chat Bubble Styling */
+
 
   #chat {
     display: flex;
@@ -77,8 +191,7 @@ img {
     float: right;
   }
   
-
-    #chat1 {
+  #chat1 {
       height: 80px;
       width: 80px;
       border: none;
@@ -86,7 +199,7 @@ img {
       cursor: pointer;
   }
   .background {
-    background-color: #1950ff;
+    background-color: crimson;
     border-radius: 50%;
     box-shadow: 0 2.1px 1.3px rgba(0, 0, 0, 0.044),
       0 5.9px 4.2px rgba(0, 0, 0, 0.054), 0 12.6px 9.5px rgba(0, 0, 0, 0.061),
@@ -134,22 +247,14 @@ img {
     transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
     float: right;
   }
-  .active .bubble {
-    transform: translateX(24px) translateY(4px) rotate(45deg);
-    float: right;
+
+  /* Footer Information */
+
+  .my-information {
+    margin-top: auto;
+    text-align: center;
   }
-  .active .line1 {
-    stroke-dashoffset: 21;
-    float: right;
-  }
-  .active .line2 {
-    stroke-dashoffset: 30;
-    float: right;
-  }
-  .active .circle {
-    transform: scale(0);
-    float: right;
-  }
+  
 
   /* Form Styling */
   .form-popup {
@@ -166,8 +271,78 @@ img {
     z-index: 20;
     background-color: #ffffff;
     width: 500px;
+    height: 500px;
     max-width: 80%;
-    padding: 10px;
+    padding: 20px;
+    text-align: center;
   }
 
-  
+  .break {
+    height: 15px;
+  }
+
+  .btn-submit {
+    background-color: seagreen;
+    color: #ffffff;
+    padding: 10px;
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 20%;
+  }
+
+  .btn-cancel {
+    background-color: crimson;
+    color: #ffffff;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 20%;
+  }
+
+button:hover {
+  cursor: pointer;
+  color: black;
+}
+
+  /* Thank you Popup Styling */
+
+  .thank-you-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 20;
+    background-color: #ffffff;
+    width: 500px;
+    height: 500px;
+    max-width: 80%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .thank-you-popup {
+    display: none;
+  }
+
+
+  /*Success Page*/
+
+  .success {
+    display: flex;
+    text-align: center;
+  }
+
+  .success-img {
+    height: 200px;
+    align-items: center;
+  }
+
+
+
+
+
+
+

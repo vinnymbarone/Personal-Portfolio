@@ -4,8 +4,14 @@ function openForm() {
   
   function closeForm() {
     document.getElementById("myForm").style.display = "none";
-    this.classList.remove('active');
+    
   }
 
+function hideButton() {
+    document.getElementById("chat").style.display = "none";
+}
 
+function showButton() {
+    document.getElementById("chat").style.display = "block";
+}
 
